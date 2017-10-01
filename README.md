@@ -6,8 +6,8 @@
 ## Running Locally
 
 ```bash
-$ git clone https://github.com/Rjoydip/node-sms.git # or clone your own fork
-$ cd node-sms
+$ git clone https://github.com/Rjoydip/node-redis.git # or clone your own fork
+$ cd node-redis
 $ npm install
 $ npm start
 ```
