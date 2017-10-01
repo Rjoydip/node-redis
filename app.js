@@ -59,7 +59,6 @@ app.get('/get/:key', function (req, res) {
 
 app.post('/set', function (req, res) {
   if (req.body.key && req.body.value) {
-    client.expire('string key', 3);
     client.set(req.body.key, req.body.value, function (err, status) {
       if (err)
         return res.status(422).send({
@@ -70,7 +69,7 @@ app.post('/set', function (req, res) {
           status
         });
     });
-  } else{
+  } else {
     return res.status(422).send({
       message: "Please provide a key, value"
     });

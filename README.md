@@ -1,6 +1,6 @@
 # node-redis
 
-> A simple redis application in node.js
+> Simple redis application in node.js
 
 
 ## Running Locally
