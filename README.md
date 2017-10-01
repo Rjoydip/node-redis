@@ -23,12 +23,23 @@ Render index.html
 ### `app.post('/set');`
 ***body:*** `{ key: <KEY>, value: <VALUE> }`
 
-Set key,value in redis.
+Set key,value in redis db.
 
 #### `Response:`
 
 * 200: Success. Payload: `{ status: "OK"}` -> If data set success fully.
 * 422: Error. Payload: `"{ err": {"status": 404} }` -> If something went wrong.
 
+### `app.post('/get');`
+
+***param:*** `key: <KEY>`
+
+Get value from redis db.
+
+#### `Response:`
+
+* 200: Success. Payload: `{ status: "OK"}` -> If data found but if not found then `{ status: null }`.
+* 422: Error. Payload: `"{ err": {"status": 404} }` -> If something went wrong.
+
 ***Note***
-If redis-server shut-down then all stored value will be losed.
+If redis-server shut-down then all stored value will be losed from memory/db.
